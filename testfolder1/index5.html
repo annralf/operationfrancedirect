@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE>Operation France Direct</TITLE>
+<meta name="identifier-url" content="http://www.operationfrancedirect.com/" />
+<meta name="resource-type" content="document" />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="copyright" content="opportom.com" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<style type="text/css" media="all">@import url("style.css");</style>    
+
+<script>
+
+function loadmap()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {   
+     mapdiv.innerHTML=xmlhttp.responseText;
+     paths = mapdiv.getElementsByTagName('path');
+     pathslength = paths.length;
+     infodep.innerHTML=pathslength;
+     
+    }
+  }
+xmlhttp.open("GET","francemap.txt",true);
+xmlhttp.send();
+}
+
+</script>
+
+
+<style type="text/css" media="all">
+ #map {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #map path {
+    transition: fill 0.3s, 
+  }
+  #map path:hover {
+    fill: red;
+  }
+  #map path:active {
+    fill: $bada55;
+  }
+
+</style>  
+
+
+</HEAD>
+
+<BODY onload="loadmap()">
+<br/>
+<div class="normal"><object  type="image/svg+xml" data="logo-OFD.svg" width="492" height="431">
+svg non support&eacute;</object>
+</div>
+<br>
+<div class="normal">
+<div class="decaleur2">
+
+<form method="post">
+<fieldset id="field">
+
+<span class="declar">Je suis</span>
+<br>
+<input type="radio" name="choix" value="0" checked>
+Un particulier<br>
+<input type="radio" name="choix" value="1">
+Une collectivit&eacute; / un gestionnaire d'&eacute;tablissement<br>
+
+<p><input type="text" name="name" id="contact_familyname" class="field" value="" />
+Nom /pr&eacute;nom</p>
+<p><input type="text" name="adresse" id="contact_adresse" class="field" value="" />
+Email</p>
+
+<span class="declar">Je donne</span><br>
+<SELECT name="don"> 
+                <OPTION VALUE="">----</OPTION>
+		<OPTION VALUE="5">5</OPTION>
+		<OPTION VALUE="10">10</OPTION>
+		<OPTION VALUE="25">25</OPTION>
+		<OPTION VALUE="50">50</OPTION>
+		<OPTION VALUE="100">100</OPTION>
+                <OPTION VALUE="250">250</OPTION>
+		<OPTION VALUE="500">500</OPTION>
+		<OPTION VALUE="1000">1000</OPTION>
+		<OPTION VALUE="5000">5000</OPTION>
+	</SELECT><span class="starr">*</span><span class="declar2">&nbsp;Euros pour moderniser en priorit&eacute; :</span><br><br>
+
+<SELECT name="fonction">
+                <OPTION VALUE="">type d'&eacute;tablissement</OPTION>
+		<OPTION VALUE="1">La mairie</OPTION>
+		<OPTION VALUE="2">Un autre &eacute;tablissement administratif</OPTION>
+		<OPTION VALUE="3">La piscine</OPTION>
+		<OPTION VALUE="4">Un autre &eacute;tablissement sportif</OPTION>
+                <OPTION VALUE="5">La m&eacute;diath&egrave;que</OPTION>
+                <OPTION VALUE="6">Le mus&eacute;e</OPTION>
+		<OPTION VALUE="7">Un autre &eacute;tablissement culturel ou touristique</OPTION>
+		<OPTION VALUE="8">Le bureau de Poste </OPTION>
+                <OPTION VALUE="9">Le service de Sant&eacute; </OPTION>
+	</SELECT><span class="starr">*</span>
+<br>
+
+<p><input type="text" name="name" id="contact_familyname" class="field" value="" />
+Nom de l'&eacute;tablissement</p>
+<p><input type="text" name="adresse" id="contact_adresse" class="field" value="" size="5" maxlength="5"/><span class="starr">*</span>
+Code Postal ou num&eacute;ro de d&eacute;partement</p>
+<p><input type="text" name="adresse" id="contact_adresse" class="field" value="" /><span class="starr">*</span>
+Localit&eacute;</p>
+<p><input name="condiciones" type="checkbox" id="condiciones" value="S"/>
+J'ai lu les <a href="about.html" target="_blank">conditions g&eacute;n&eacute;rales de l'Op&eacute;ration France Direct</a><p>
+<input type="submit" name="button" id="button" value="paiement CB" onClick="valida_compra();return false"/>
+<span class="starr"> * champ obligatoire</span><br><br/>
+
+
+<span class="declar"> Et je vais enfin savoir</span><br>
+<span class="declar2">si l'&eacute;tablissement est officiellement :</span>
+</fieldset>
+</form>
+</div>
+</div>
+
+<div id="explain">
+
+<div id="decaleur">
+<div class="etat" id="-1">
+<svg class="affsvg" style="border:0px solid blue" height="60" width="60"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter3874" color-interpolation-filters="sRGB">
+   <feGaussianBlur id="feGaussianBlur3876" stdDeviation="0.26026526"/>
+  </filter>
+ </defs>
+ <g transform="scale(3)">
+  <path id="ombre" filter="url(#filter3874)" fill="#424242" d="m9.5934,1.5c-4.9434,0-8.9687,4.0253-8.9687,8.9688,0,4.9434,4.0253,8.9375,8.9687,8.9375s8.9375-3.9941,8.9375-8.9375c0-4.9435-3.9941-8.9688-8.9375-8.9688zm6.9375,3.4688-8.5937,10-3.9062-4.5938c-0.67782-0.7761,0.75697-2.2556,1.5312-1.4375l2.3125,2.6563,8.6562-6.625z"/>
+  <path id="dessus-vert" fill="#ca0000" d="m10.26,1c-4.9434,0-8.9687,4.0253-8.9687,8.9687s4.0253,8.9375,8.9687,8.9375,8.9375-3.9941,8.9375-8.9375-3.9941-8.9687-8.9375-8.9687zm6.9375,3.4687-8.5938,10-3.9062-4.5937c-0.67782-0.7761,0.75697-2.2556,1.5312-1.4375l2.3125,2.6562,8.6562-6.625z"/>
+ </g>
+</svg><span id="ferme2" class="aftext"> Ferm&eacute; </span><span id="ferme21" class="aftext">(exceptionnel)</span>
+</div>
+
+
+<div class="etat" id="0">
+<svg class="affsvg" style="border:0px solid blue" height="60" width="60"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter3875" color-interpolation-filters="sRGB">
+   <feGaussianBlur id="feGaussianBlur3876" stdDeviation="0.26026526"/>
+  </filter>
+ </defs>
+ <g transform="scale(3)">
+  <path id="ombre" filter="url(#filter3875)" fill="#424242" d="m9.5934,1.5c-4.9434,0-8.9687,4.0253-8.9687,8.9688,0,4.9434,4.0253,8.9375,8.9687,8.9375s8.9375-3.9941,8.9375-8.9375c0-4.9435-3.9941-8.9688-8.9375-8.9688zm6.9375,3.4688-8.5937,10-3.9062-4.5938c-0.67782-0.7761,0.75697-2.2556,1.5312-1.4375l2.3125,2.6563,8.6562-6.625z"/>
+  <path id="dessus-vert" fill="#fe6000" d="m10.26,1c-4.9434,0-8.9687,4.0253-8.9687,8.9687s4.0253,8.9375,8.9687,8.9375,8.9375-3.9941,8.9375-8.9375-3.9941-8.9687-8.9375-8.9687zm6.9375,3.4687-8.5938,10-3.9062-4.5937c-0.67782-0.7761,0.75697-2.2556,1.5312-1.4375l2.3125,2.6562,8.6562-6.625z"/>
+ </g>
+</svg><span id="ferme1" class="aftext"> Ferm&eacute; </span><span id="ferme11" class="aftext">(normal)</span>
+</div>
+
+<div class="etat" id="1">
+<div class="etat" >
+<svg class="affsvg" style="border:0px solid blue" height="60" width="60"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter3876" color-interpolation-filters="sRGB">
+   <feGaussianBlur id="feGaussianBlur3876" stdDeviation="0.26026526"/>
+  </filter>
+ </defs>
+ <g transform="scale(3)">
+  <path id="ombre" filter="url(#filter3876)" fill="#424242" d="m9.5934,1.5c-4.9434,0-8.9687,4.0253-8.9687,8.9688,0,4.9434,4.0253,8.9375,8.9687,8.9375s8.9375-3.9941,8.9375-8.9375c0-4.9435-3.9941-8.9688-8.9375-8.9688zm6.9375,3.4688-8.5937,10-3.9062-4.5938c-0.67782-0.7761,0.75697-2.2556,1.5312-1.4375l2.3125,2.6563,8.6562-6.625z"/>
+  <path id="dessus-vert" fill="#02b100" d="m10.26,1c-4.9434,0-8.9687,4.0253-8.9687,8.9687s4.0253,8.9375,8.9687,8.9375,8.9375-3.9941,8.9375-8.9375-3.9941-8.9687-8.9375-8.9687zm6.9375,3.4687-8.5938,10-3.9062-4.5937c-0.67782-0.7761,0.75697-2.2556,1.5312-1.4375l2.3125,2.6562,8.6562-6.625z"/>
+ </g>
+</svg><span id="ouvert" class="aftext"> Ouvert</span>
+</div>
+
+
+<svg id="affsvg" style="border:0px solid blue" height="110" width="264"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns="http://www.w3.org/2000/svg">
+  <g id="group1" <g transform="scale(1.5)">
+  <path
+       d="m 20,5 c -3.49118,0 -6.38829,2.88593 -6.38829,6.36362 0,2.1548 1.10112,4.07444 2.77587,5.22728 -0.056,0.15782 -0.0972,0.31892 -0.11408,0.49241 l -0.19014,1.7803 -7.98536,8.63634 -0.49432,0.60606 -0.038,0.75758 -0.38026,11.96967 c -0.0421,1.16106 0.88783,2.11725 2.05339,2.15909 1.16556,0.0418 2.12544,-0.84653 2.16745,-2.00757 l 0.34223,-11.24998 3.57441,-3.86364 -4.37295,40.22721 c -0.126,1.15059 0.70821,2.18509 1.86326,2.31059 1.15506,0.12551 2.19355,-0.70546 2.31954,-1.85605 l 2.23265,-20.97399 2.77046,6.75324 1.27112,13.08439 c 0.0463,0.76696 0.51798,1.45503 1.21682,1.7803 0.69881,0.32525 1.5091,0.22939 2.12943,-0.22727 0.62033,-0.45667 0.94358,-1.20877 0.83656,-1.96969 l -1.34718,-13.90149 c 0,0 -6.01511,-12.26456 -6.06237,-12.33224 l 0.83113,-8.04651 0.87458,3.44695 0.11408,0.3788 0.19013,0.30302 6.27423,9.16665 c 0.38438,0.69932 1.13962,1.13204 1.93929,1.09849 0.79968,-0.0336 1.50125,-0.52095 1.82522,-1.25 0.32399,-0.72906 0.20849,-1.58472 -0.30419,-2.19696 l -6.00803,-8.82574 -3.49837,-13.9015 -0.0761,-0.3409 0.11408,-0.90909 c 3.28224,-0.23861 5.93199,-3.00147 5.93199,-6.32575 10e-6,-3.47772 -2.89712,-6.36362 -6.3883,-6.36362 z"
+       id="affluence1"
+       style="fill:#0200ff;fill-opacity:1;fill-rule:evenodd;stroke:#000080;stroke-width:0.48578644;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+    </path>
+ <path
+       d="m 55,5 c -3.49118,0 -6.38829,2.88593 -6.38829,6.36362 0,2.1548 1.10112,4.07444 2.77587,5.22728 -0.056,0.15782 -0.0972,0.31892 -0.11408,0.49241 l -0.19014,1.7803 -7.98536,8.63634 -0.49432,0.60606 -0.038,0.75758 -0.38026,11.96967 c -0.0421,1.16106 0.88783,2.11725 2.05339,2.15909 1.16556,0.0418 2.12544,-0.84653 2.16745,-2.00757 l 0.34223,-11.24998 3.57441,-3.86364 -4.37295,40.22721 c -0.126,1.15059 0.70821,2.18509 1.86326,2.31059 1.15506,0.12551 2.19355,-0.70546 2.31954,-1.85605 l 2.23265,-20.97399 2.77046,6.75324 1.27112,13.08439 c 0.0463,0.76696 0.51798,1.45503 1.21682,1.7803 0.69881,0.32525 1.5091,0.22939 2.12943,-0.22727 0.62033,-0.45667 0.94358,-1.20877 0.83656,-1.96969 l -1.34718,-13.90149 c 0,0 -6.01511,-12.26456 -6.06237,-12.33224 l 0.83113,-8.04651 0.87458,3.44695 0.11408,0.3788 0.19013,0.30302 6.27423,9.16665 c 0.38438,0.69932 1.13962,1.13204 1.93929,1.09849 0.79968,-0.0336 1.50125,-0.52095 1.82522,-1.25 0.32399,-0.72906 0.20849,-1.58472 -0.30419,-2.19696 l -6.00803,-8.82574 -3.49837,-13.9015 -0.0761,-0.3409 0.11408,-0.90909 c 3.28224,-0.23861 5.93199,-3.00147 5.93199,-6.32575 10e-6,-3.47772 -2.89712,-6.36362 -6.3883,-6.36362 z"
+       id="affluence2"
+       style="fill:#ffffff;fill-opacity:1;stroke:#8080ff;stroke-width:0.48578644;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">  
+    </path>
+ <path
+       d="m 90,5 c -3.49118,0 -6.38829,2.88593 -6.38829,6.36362 0,2.1548 1.10112,4.07444 2.77587,5.22728 -0.056,0.15782 -0.0972,0.31892 -0.11408,0.49241 l -0.19014,1.7803 -7.98536,8.63634 -0.49432,0.60606 -0.038,0.75758 -0.38026,11.96967 c -0.0421,1.16106 0.88783,2.11725 2.05339,2.15909 1.16556,0.0418 2.12544,-0.84653 2.16745,-2.00757 l 0.34223,-11.24998 3.57441,-3.86364 -4.37295,40.22721 c -0.126,1.15059 0.70821,2.18509 1.86326,2.31059 1.15506,0.12551 2.19355,-0.70546 2.31954,-1.85605 l 2.23265,-20.97399 2.77046,6.75324 1.27112,13.08439 c 0.0463,0.76696 0.51798,1.45503 1.21682,1.7803 0.69881,0.32525 1.5091,0.22939 2.12943,-0.22727 0.62033,-0.45667 0.94358,-1.20877 0.83656,-1.96969 l -1.34718,-13.90149 c 0,0 -6.01511,-12.26456 -6.06237,-12.33224 l 0.83113,-8.04651 0.87458,3.44695 0.11408,0.3788 0.19013,0.30302 6.27423,9.16665 c 0.38438,0.69932 1.13962,1.13204 1.93929,1.09849 0.79968,-0.0336 1.50125,-0.52095 1.82522,-1.25 0.32399,-0.72906 0.20849,-1.58472 -0.30419,-2.19696 l -6.00803,-8.82574 -3.49837,-13.9015 -0.0761,-0.3409 0.11408,-0.90909 c 3.28224,-0.23861 5.93199,-3.00147 5.93199,-6.32575 10e-6,-3.47772 -2.89712,-6.36362 -6.3883,-6.36362 z"
+       id="affluence3"
+       style="fill:#ffffff;fill-opacity:1;stroke:#8080ff;stroke-width:0.48578644;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">  
+    </path>
+ <path
+       d="m 125,5 c -3.49118,0 -6.38829,2.88593 -6.38829,6.36362 0,2.1548 1.10112,4.07444 2.77587,5.22728 -0.056,0.15782 -0.0972,0.31892 -0.11408,0.49241 l -0.19014,1.7803 -7.98536,8.63634 -0.49432,0.60606 -0.038,0.75758 -0.38026,11.96967 c -0.0421,1.16106 0.88783,2.11725 2.05339,2.15909 1.16556,0.0418 2.12544,-0.84653 2.16745,-2.00757 l 0.34223,-11.24998 3.57441,-3.86364 -4.37295,40.22721 c -0.126,1.15059 0.70821,2.18509 1.86326,2.31059 1.15506,0.12551 2.19355,-0.70546 2.31954,-1.85605 l 2.23265,-20.97399 2.77046,6.75324 1.27112,13.08439 c 0.0463,0.76696 0.51798,1.45503 1.21682,1.7803 0.69881,0.32525 1.5091,0.22939 2.12943,-0.22727 0.62033,-0.45667 0.94358,-1.20877 0.83656,-1.96969 l -1.34718,-13.90149 c 0,0 -6.01511,-12.26456 -6.06237,-12.33224 l 0.83113,-8.04651 0.87458,3.44695 0.11408,0.3788 0.19013,0.30302 6.27423,9.16665 c 0.38438,0.69932 1.13962,1.13204 1.93929,1.09849 0.79968,-0.0336 1.50125,-0.52095 1.82522,-1.25 0.32399,-0.72906 0.20849,-1.58472 -0.30419,-2.19696 l -6.00803,-8.82574 -3.49837,-13.9015 -0.0761,-0.3409 0.11408,-0.90909 c 3.28224,-0.23861 5.93199,-3.00147 5.93199,-6.32575 10e-6,-3.47772 -2.89712,-6.36362 -6.3883,-6.36362 z"
+       id="affluence4"
+       style="fill:#ffffff;fill-opacity:1;stroke:#8080ff;stroke-width:0.48578644;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">  
+    </path>
+ <path
+       d="m 160,5 c -3.49118,0 -6.38829,2.88593 -6.38829,6.36362 0,2.1548 1.10112,4.07444 2.77587,5.22728 -0.056,0.15782 -0.0972,0.31892 -0.11408,0.49241 l -0.19014,1.7803 -7.98536,8.63634 -0.49432,0.60606 -0.038,0.75758 -0.38026,11.96967 c -0.0421,1.16106 0.88783,2.11725 2.05339,2.15909 1.16556,0.0418 2.12544,-0.84653 2.16745,-2.00757 l 0.34223,-11.24998 3.57441,-3.86364 -4.37295,40.22721 c -0.126,1.15059 0.70821,2.18509 1.86326,2.31059 1.15506,0.12551 2.19355,-0.70546 2.31954,-1.85605 l 2.23265,-20.97399 2.77046,6.75324 1.27112,13.08439 c 0.0463,0.76696 0.51798,1.45503 1.21682,1.7803 0.69881,0.32525 1.5091,0.22939 2.12943,-0.22727 0.62033,-0.45667 0.94358,-1.20877 0.83656,-1.96969 l -1.34718,-13.90149 c 0,0 -6.01511,-12.26456 -6.06237,-12.33224 l 0.83113,-8.04651 0.87458,3.44695 0.11408,0.3788 0.19013,0.30302 6.27423,9.16665 c 0.38438,0.69932 1.13962,1.13204 1.93929,1.09849 0.79968,-0.0336 1.50125,-0.52095 1.82522,-1.25 0.32399,-0.72906 0.20849,-1.58472 -0.30419,-2.19696 l -6.00803,-8.82574 -3.49837,-13.9015 -0.0761,-0.3409 0.11408,-0.90909 c 3.28224,-0.23861 5.93199,-3.00147 5.93199,-6.32575 10e-6,-3.47772 -2.89712,-6.36362 -6.3883,-6.36362 z"
+       id="affluence5"
+       style="fill:#ffffff;fill-opacity:1;stroke:#8080ff;stroke-width:0.48578644;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">  
+    </path>  
+</g>   
+    </svg>
+ <div id="affluencetexte">Affluence tr&egrave;s faible</div>
+</div>
+ </div>
+
+</div>
+
+<br/><br/>
+<br/><br><br><br><br>
+
+
+<div class="normal"> 
+
+<div class="separ"></div>
+
+<div class="decaleur3">
+<br><span class="declar3"> Les objectifs de l'op&eacute;ration</span><br>
+<span class="declar4">2.000 &eacute;tablissements &agrave; financer</span><br>
+<span class="declar4">90 jours de collecte</span><br>
+<span class="declar4">( 1 &eacute;tablissement = 200 euros )</span><br>
+
+
+<br>
+</div>
+
+<div class="separ"></div>
+</div>
+<br/>
+<br/>
+<div id="mapdiv"> </div>
+<br/>
+<div id="infodep">bbbbbbb</div>
+<br/>
+<div id="infodep2">bbbbbbb</div>
+
+</BODY>
+
+
+<script>
+
+mapdiv =  document.getElementById("mapdiv");
+infodep = document.getElementById("infodep");
+infodep2 = document.getElementById("infodep2");
+
+
+
+affluence1 =  document.getElementById("affluence1");
+affluence2 =  document.getElementById("affluence2");
+affluence3 =  document.getElementById("affluence3");
+affluence4 =  document.getElementById("affluence4");
+affluence5 =  document.getElementById("affluence5");
+affluencetexte =  document.getElementById("affluencetexte");
+aff=-2;
+
+etatm1 =  document.getElementById("-1");
+etat0 =  document.getElementById("0");
+etat1 =  document.getElementById("1");
+
+function visi(l)
+{
+var ll=l.toString();
+mylayer= document.getElementById(ll);
+etatm1.style.display="none";
+etat0.style.display="none";
+etat1.style.display="none";
+mylayer.style.display="block";
+
+}
+
+visi(-1);
+
+
+function myanimator()
+{
+aff=aff+1;
+
+if (aff>0) { 
+visi (1);
+
+if (aff<6) {
+var manid="affluence"+aff;
+var man = document.getElementById(manid);
+man.setAttribute("style","fill:#0200ff;fill-opacity:1;fill-rule:evenodd;stroke:#000080;stroke-width:0.48578644;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline");
+}
+
+else {
+aff=-2;
+naff=2;
+while (naff<6) {
+var manid="affluence"+naff;
+var man = document.getElementById(manid);
+man.setAttribute("style", "fill:#ffffff;fill-opacity:1;stroke:#8080ff;stroke-width:0.48578644;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline");
+naff=naff+1;
+visi(-1);
+}
+}
+
+switch (aff) {
+case 1: affluencetexte.innerHTML="Affluence tr&egrave;s faible"; break;
+case 2: affluencetexte.innerHTML="Affluence faible"; break;
+case 3: affluencetexte.innerHTML="Affluence moyenne"; break;
+case 4: affluencetexte.innerHTML="Affluence forte"; break;
+case 5: affluencetexte.innerHTML="Affluence tr&egrave;s forte"; break;
+}
+
+}
+else
+{
+visi (aff);
+}
+
+}
+
+setInterval("myanimator()",1000);
+
+
+</script>
+
+
+
+</HTML>

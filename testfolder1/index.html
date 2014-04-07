@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=iso-8859-1">
+<TITLE>Operation France Direct</TITLE>
+<meta name="identifier-url" content="http://www.operationfrancedirect.com/" />
+<meta name="resource-type" content="document" />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="copyright" content="opportom.com" />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<style type="text/css" media="all">@import url("style.css");</style>    
+
+<script>
+
+function loadmap()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {   
+     mapdiv.innerHTML=xmlhttp.responseText;
+     paths = mapdiv.getElementsByTagName('path');
+     pathslength = paths.length;
+     infodep.innerHTML=pathslength;
+     
+    }
+  }
+xmlhttp.open("GET","francemap.txt",true);
+xmlhttp.send();
+}
+
+</script>
+
+
+<style type="text/css" media="all">
+ #map {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #map path {
+    transition: fill 0.3s, stroke 0.3s;
+  }
+  #map path:hover {
+    fill: red;
+    stroke: red;
+  }
+  #map path:active {
+    fill: $bada55;
+    stroke: $bada55;
+  }
+
+</style>  
+
+
+</HEAD>
+
+<BODY onload="loadmap()">
+<br/>
+<br/>
+<div id="logo"><object  type="image/svg+xml" data="logo-OFD.svg" width="466" height="408">
+svg non support&eacute;</object>
+</div>
+
+<h1></h1>
+<h2> </h2>
+<br/>
+<div id="mapdiv"> </div>
+<br/>
+<div id="infodep">bbbbbbb</div>
+<br/>
+<div id="infodep2">bbbbbbb</div>
+
+</BODY>
+
+
+<script>
+
+mapdiv =  document.getElementById("mapdiv");
+infodep = document.getElementById("infodep");
+infodep2 = document.getElementById("infodep2");
+
+  
+  
+document.addEventListener('DOMContentLoaded', function(){
+   paths = mapdiv.getElementsByTagName('path');
+
+  for (var i = 0; i < pathslength; i++) {
+    paths[i].addEventListener("click", function(e){
+    fillinfo(e.target.getAttribute('data-num'));
+     })
+    }
+   });
+
+fillinfo(depnum){
+ infodep2.innerHTML=depnum;
+}
+
+//fillinfo("zzzzé");
+
+</script>
+
+
+
+</HTML>

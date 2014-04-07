@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <title>sidegradient</title>
+  <defs>
+    <linearGradient id="g1" x1="50%" x2="100%" y1="50%" y2="50%">
+      <stop style="stop-color: gray;" offset="0"/>
+      <stop style="stop-color: white;" offset="1"/>
+    </linearGradient>
+       <linearGradient id="g2" x1="50%" x2="0%" y1="50%" y2="50%">
+      <stop style="stop-color: gray;" offset="0"/>
+      <stop style="stop-color: white;" offset="1"/>
+    </linearGradient>
+  </defs>
+  <rect style="fill: url(#g2);" width="50%" height="100%"/>
+  <rect style="fill: url(#g1);" width="50%" height="100%" x="50%" y="0"/>
+
+</svg>

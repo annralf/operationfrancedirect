@@ -1,0 +1,131 @@
+
+body {
+text-align: center;
+font-family: times;
+font-size: 12px;
+color: grey;
+margin: 0px;
+<--background-color:yellow;-->
+}
+
+a:link { text-decoration: none;}
+a:visited { text-decoration: none;}
+a:hover { text-decoration: underline;}
+
+.normal {
+margin-left: auto;
+margin-right: auto;
+width: 492; /*  */
+padding: 0px;
+}
+
+
+#explain{
+text-align: left;
+margin-left: auto;
+margin-right: auto;
+width: 492; /*  */
+padding: 0px;
+}
+
+.affsvg{
+}
+
+.aftext{
+text-align: left;
+font-family: arial;
+font-size: 54px;
+font-weight:bold;
+}
+
+#ouvert{
+color: #02b100;
+}
+
+#ferme1{
+color:#fe6000;
+}
+
+#ferme2{
+color:#ca0000;
+}
+
+#ferme11{
+color:#fe6000;
+font-size: 17px;
+font-weight:normal;
+}
+
+#ferme21{
+color:#ca0000;
+font-size: 17px;
+font-weight:normal;
+}
+
+.affsvg{
+vertical-align: top;
+}
+
+#affluencetexte{
+text-align: left;
+font-family: arial;
+font-size: 29px;
+color:#0200ff;
+}
+
+.etat{
+margin-top:5px;
+}
+
+#explain{
+height: 130px;
+margin-top: 0px;
+}
+
+#decaleur{
+margin-left: 50px;
+}
+
+.decaleur2{
+margin-left: 10px;
+text-align: left;
+margin-bottom: -20px;
+}
+
+#field{
+font-size:150%;
+border: 0px solid black;
+
+}
+
+.declar{
+font-size:200%
+}
+
+.declar2{
+font-size:125%
+}
+
+.decaleur3{
+text-align: center;
+}
+
+.declar3{
+font-size:300%
+}
+
+.declar4{
+font-size:200%
+}
+
+.starr{
+color:black;
+}
+
+.separ{
+background-image: url(gradient.svg);
+background-size: cover;
+height:3px;
+}
+
+
